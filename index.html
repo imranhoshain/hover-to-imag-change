@@ -1,0 +1,45 @@
+<style>
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  padding: 3px 0;
+  background: green;
+  margin: 3px 0;
+  list-style: none;
+}
+li:hover {  
+  background: #000;
+  color: #fff;
+}
+</style>
+<img id="1" src="1.jpg" />
+<ul id="myList">
+	<li id="item1">Small Item</li>
+	<li id="item2">Large Item</li>
+	<li id="item3">1/8</li>
+	<li id="item4">1/6</li>
+	<li id="item5">1/4</li>
+	<li id="item6">1/3</li>
+	<li id="item7">3/8</li>
+	<li id="item8">1/2</li>
+	<li id="item9">5/8</li>
+	<li id="item10">2/3</li>
+	<li id="item11">3/4</li>
+	<li id="item12">5/6</li>
+	<li id="item13">7/8</li>
+	<li id="item14">Full Load</li>
+</ul>
+
+<script>
+var myImages = {item1:"1.jpg",item2:"2.jpg",item3:"3.jpg",item4:"4.jpg",item5:"5.jpg",item6:"6.jpg",item7:"7.jpg",item8:"4.jpg",item9:"1.jpg",item10:"2.jpg",item11:"11.jpg",item12:"4.jpg",item13:"11.jpg",item14:"4.jpg"};
+window.onload=function() {
+  var lis = document.getElementById('myList').getElementsByTagName('li');
+  for (var i=0;i<lis.length;i++) {
+    lis[i].onmouseover=function() {
+       document.getElementById('1').src=myImages[this.id];
+    }
+  }
+}
+</script>
